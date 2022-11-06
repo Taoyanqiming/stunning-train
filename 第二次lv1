@@ -1,0 +1,27 @@
+package main
+
+import "fmt"
+
+type Legendary struct {
+	Name     string
+	Duration float32
+	Hobby    string
+	Skill    Skill
+}
+type Skill struct {
+	Skill1 string
+	SKill2 string
+}
+
+func main() {
+	i := Legendary{
+		Name:     "Caixukun",
+		Duration: 2.5,
+		Hobby:    "sing jump rap basketball",
+		Skill: Skill{
+			Skill1: "魔法吟唱",
+			SKill2: "炫耀四肢",
+		},
+	}
+	fmt.Printf("%+v\n", i)
+}

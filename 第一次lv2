@@ -1,0 +1,36 @@
+package main
+
+import "fmt"
+
+func Calculator() {
+	var (
+		inputNum1, inputNum2 float64
+		cmd                  string
+		results              []float64
+	)
+	for {
+		fmt.Scan(&inputNum1, &cmd, &inputNum2)
+		switch cmd {
+		case "+":
+			results = append(results, inputNum1+inputNum2)
+
+		case "-":
+			results = append(results, inputNum1-inputNum2)
+
+		case "*":
+			results = append(results, inputNum1*inputNum2)
+
+		case "/":
+			if inputNum2 == 0 {
+				fmt.Println("unvalidated input 0")
+				continue
+			}
+			results = append(results, inputNum1/inputNum2)
+
+		default:
+			fmt.Println("it is not support")
+		}
+		fmt.Println(results)
+	}
+
+}

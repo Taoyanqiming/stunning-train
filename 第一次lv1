@@ -1,4 +1,4 @@
-package main//无法运行的代码。
+package main//
 
 import "fmt"
 
